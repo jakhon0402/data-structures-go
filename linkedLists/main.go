@@ -1,4 +1,4 @@
-package main
+package linkedLists
 
 import "fmt"
 
@@ -41,6 +41,9 @@ func (l *LinkedList) deleteWithValue(val int) {
 
 	prevtoDelete := l.head
 	for prevtoDelete.next.data != val {
+		if prevtoDelete.next.next == nil {
+			return
+		}
 		prevtoDelete = prevtoDelete.next
 	}
 	prevtoDelete.next = prevtoDelete.next.next
