@@ -87,7 +87,7 @@ func Init() *HashTable {
 
 func main() {
 	myHashTable := Init()
-	arr := []string{
+	arr := [ArraySize]string{
 		"olma",
 		"anor",
 		"olcha",
